@@ -11,3 +11,15 @@ See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptog
 """
 associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
 
+edq = input("Enter e to encrypt, d to decrypt, or q to quit: ")
+
+if edq == "e":
+    emessage = input("Message: ")
+    ekey = input("Key: ")
+
+if edq == "d":
+    dmessage = input("Message: ")
+    dkey = input("Key: ")
+
+if edq == "q":
+    print("Goodbye!")
