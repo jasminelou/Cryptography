@@ -1,7 +1,7 @@
 """
 cryptography.py
-Author: <your name here>
-Credit: <list sources used, if any>
+Author: Jasmine Lou
+Credit: classmates, the internet, Mr. Dennison
 
 Assignment:
 
@@ -16,6 +16,8 @@ edq = input("Enter e to encrypt, d to decrypt, or q to quit: ")
 if edq == "e":
     emessage = input("Message: ")
     ekey = input("Key: ")
+    emessagelist = print(list(emessage))
+    ekeylist = print(list(ekey))
 
 if edq == "d":
     dmessage = input("Message: ")
