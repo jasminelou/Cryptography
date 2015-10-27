@@ -16,8 +16,9 @@ edq = input("Enter e to encrypt, d to decrypt, or q to quit: ")
 if edq == "e":
     emessage = input("Message: ")
     ekey = input("Key: ")
+    eeekey = ekey
     while len(ekey) < len(emessage):
-        ekey = ekey + ekey
+        ekey = ekey + eeekey
     emessagelist = print(list(emessage))
     ekeylist = print(list(ekey))
 
