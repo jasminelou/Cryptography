@@ -22,6 +22,11 @@ if edq == "e":
 if edq == "d":
     dmessage = input("Message: ")
     dkey = input("Key: ")
+    dmessagelist = print(list(dmessage))
+    dkeylist = print(list(dkey))
+
+if edq != "d" and edq != "e" and edq !="q":
+    print("Did not understand command, try again.")
 
 if edq == "q":
     print("Goodbye!")
