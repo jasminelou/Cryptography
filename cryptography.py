@@ -19,6 +19,8 @@ if edq == "e":
     eeekey = ekey
     while len(ekey) < len(emessage):
         ekey = ekey + eeekey
+        while len(ekey) > len(emessage):
+            
     emessagelist = print(list(emessage))
     ekeylist = print(list(ekey))
 
