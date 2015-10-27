@@ -20,7 +20,7 @@ if edq == "e":
     while len(ekey) < len(emessage):
         ekey = ekey + eeekey
         while len(ekey) > len(emessage):
-            
+            ekey.remove([-1])
     emessagelist = print(list(emessage))
     ekeylist = print(list(ekey))
 
