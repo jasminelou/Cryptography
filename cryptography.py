@@ -13,17 +13,18 @@ associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .
 
 edq = input("Enter e to encrypt, d to decrypt, or q to quit: ")
 
-while edq != q
+while edq != "q":
+    
     if edq == "e":
         emessage = input("Message: ")
         ekey = input("Key: ")
         eeekey = ekey
         while len(ekey) < len(emessage):
             ekey = ekey + eeekey
-            while len(ekey) > len(emessage):
-                ekey.remove([-1])
         emessagelist = print(list(emessage))
         ekeylist = print(list(ekey))
+        for x in emessagelist:
+            
     
     if edq == "d":
         dmessage = input("Message: ")
@@ -33,3 +34,6 @@ while edq != q
     
     if edq != "d" and edq != "e" and edq !="q":
         print("Did not understand command, try again.")
+
+if edq != "q":
+    print("Goodbye!")
