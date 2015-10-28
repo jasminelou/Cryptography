@@ -12,19 +12,21 @@ See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptog
 associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
 
 edq = input("Enter e to encrypt, d to decrypt, or q to quit: ")
+enumlist = []
 
 while edq != "q":
     
     if edq == "e":
         emessage = input("Message: ")
+        for x in emessage:
+            enumlist.append(associations.find(x))
+        print(enumlist)
         ekey = input("Key: ")
         eeekey = ekey
         while len(ekey) < len(emessage):
             ekey = ekey + eeekey
         emessagelist = print(list(emessage))
         ekeylist = print(list(ekey))
-        for x in emessagelist:
-            
     
     if edq == "d":
         dmessage = input("Message: ")
