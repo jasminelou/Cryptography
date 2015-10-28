@@ -13,25 +13,23 @@ associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .
 
 edq = input("Enter e to encrypt, d to decrypt, or q to quit: ")
 
-if edq == "e":
-    emessage = input("Message: ")
-    ekey = input("Key: ")
-    eeekey = ekey
-    while len(ekey) < len(emessage):
-        ekey = ekey + eeekey
-        while len(ekey) > len(emessage):
-            ekey.remove([-1])
-    emessagelist = print(list(emessage))
-    ekeylist = print(list(ekey))
-
-if edq == "d":
-    dmessage = input("Message: ")
-    dkey = input("Key: ")
-    dmessagelist = print(list(dmessage))
-    dkeylist = print(list(dkey))
-
-if edq != "d" and edq != "e" and edq !="q":
-    print("Did not understand command, try again.")
-
-if edq == "q":
-    print("Goodbye!")
+while edq != q
+    if edq == "e":
+        emessage = input("Message: ")
+        ekey = input("Key: ")
+        eeekey = ekey
+        while len(ekey) < len(emessage):
+            ekey = ekey + eeekey
+            while len(ekey) > len(emessage):
+                ekey.remove([-1])
+        emessagelist = print(list(emessage))
+        ekeylist = print(list(ekey))
+    
+    if edq == "d":
+        dmessage = input("Message: ")
+        dkey = input("Key: ")
+        dmessagelist = print(list(dmessage))
+        dkeylist = print(list(dkey))
+    
+    if edq != "d" and edq != "e" and edq !="q":
+        print("Did not understand command, try again.")
