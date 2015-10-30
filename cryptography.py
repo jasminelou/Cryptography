@@ -18,13 +18,16 @@ while edq != "q":
     
     if edq == "e":
         emessage = input("Message: ")
-        for x in emessage:
-            enumlist.append(associations.find(x))
-        print(enumlist)
         ekey = input("Key: ")
         eeekey = ekey
         while len(ekey) < len(emessage):
             ekey = ekey + eeekey
+        for x in emessage:
+            enumlist.append(associations.find(x))
+            for y in ekey:
+                
+        print(enumlist)
+
         emessagelist = print(list(emessage))
         ekeylist = print(list(ekey))
     
