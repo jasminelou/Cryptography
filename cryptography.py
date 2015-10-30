@@ -25,9 +25,9 @@ while edq != "q":
             ekey = ekey + eeekey
         for x in emessage:
             enumlist.append(associations.find(x))
-            for y in ekey:
-                ekeynumlist.append(associations.find(y))
-            
+        for y in ekey:
+             ekeynumlist.append(associations.find(y))
+             
                 
         print(enumlist)
         print(ekeynumlist)
