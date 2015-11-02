@@ -14,6 +14,8 @@ associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .
 edq = input("Enter e to encrypt, d to decrypt, or q to quit: ")
 enumlist = []
 ekeynumlist = []
+enewnums = []
+eend = []
 
 while edq != "q":
     
@@ -29,7 +31,15 @@ while edq != "q":
              ekeynumlist.append(associations.find(y))
              
         ezip = list(zip(enumlist, ekeynumlist))
-        print(ezip)
+        
+        for a in ezip:
+            enewnums.append(a[0] + a[1])
+        print(enewnums)
+        
+        for i in enewnums:
+            eend.append(associations[i])
+            
+        print(eend)
 
     if edq == "d":
         dmessage = input("Message: ")
