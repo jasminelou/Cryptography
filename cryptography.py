@@ -28,10 +28,9 @@ while edq != "q":
         for y in ekey:
              ekeynumlist.append(associations.find(y))
              
-                
-        print(enumlist)
-        print(ekeynumlist)
-    
+        ezip = list(zip(enumlist, ekeynumlist))
+        print(ezip)
+
     if edq == "d":
         dmessage = input("Message: ")
         dkey = input("Key: ")
