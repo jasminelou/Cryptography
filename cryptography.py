@@ -40,6 +40,8 @@ while edq != "q":
             enewnums.append(a[0] + a[1])
         
         for i in enewnums:
+            if enewnums[i] > 87:
+                enewnums[i] = enewnums[i]-87
             eend.append(associations[i])
             
         print(''.join(eend))
