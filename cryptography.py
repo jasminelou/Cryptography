@@ -16,6 +16,10 @@ enumlist = []
 ekeynumlist = []
 enewnums = []
 eend = []
+dnumlist = []
+dkeynumlist = []
+dnewnums = []
+dend = []
 
 while edq != "q":
     
@@ -34,18 +38,34 @@ while edq != "q":
         
         for a in ezip:
             enewnums.append(a[0] + a[1])
-        print(enewnums)
         
         for i in enewnums:
             eend.append(associations[i])
             
-        print(eend)
+        print(''.join(eend))
 
     if edq == "d":
+
         dmessage = input("Message: ")
         dkey = input("Key: ")
-        dmessagelist = print(list(dmessage))
-        dkeylist = print(list(dkey))
+        deekey = dkey
+        while len(dkey) < len(dmessage):
+            dkey = dkey + deekey
+        for x in dmessage:
+            dnumlist.append(associations.find(x))
+        for y in dkey:
+            dkeynumlist.append(associations.find(y))
+             
+        dzip = list(zip(dnumlist, dkeynumlist))
+        
+        for a in dzip:
+            dnewnums.append(a[0] - a[1])
+        
+        for i in dnewnums:
+            dend.append(associations[i])
+            
+        print(''.join(dend))
+
     
     if edq != "d" and edq != "e" and edq !="q":
         print("Did not understand command, try again.")
