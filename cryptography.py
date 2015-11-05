@@ -66,7 +66,7 @@ while edq != "q":
         for a in dzip:
             if a[0]-a[1] > 0:
                 dnewnums.append(a[0] - a[1])
-            elif a[0]-a[1] <= 0:
+            else:
                 dnewnums.append(a[0] - a[1] + len(associations))
         
         for i in dnewnums:
