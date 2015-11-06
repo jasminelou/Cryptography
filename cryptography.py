@@ -32,7 +32,7 @@ while edq != "q":
         for x in emessage:
             enumlist.append(associations.find(x))
         for y in ekey:
-             ekeynumlist.append(associations.find(y))
+            ekeynumlist.append(associations.find(y))
              
         ezip = list(zip(enumlist, ekeynumlist))
         
