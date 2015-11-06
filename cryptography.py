@@ -47,7 +47,7 @@ while edq != "q":
             
         print(''.join(eend))
 
-#+KF;B(CH=NIZ}m;R\Dt
+# (1,2),(3,4)
 
     if edq == "d":
 
@@ -64,11 +64,11 @@ while edq != "q":
         dzip = list(zip(dnumlist, dkeynumlist))
         
         for a in dzip:
-            if a[0]-a[1] > 0:
+            if a[0]-a[1] >= 0:
                 dnewnums.append(a[0] - a[1])
             else:
                 dnewnums.append(a[0] - a[1] + len(associations))
-        
+
         for i in dnewnums:
             dend.append(associations[i])
             
