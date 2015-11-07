@@ -26,13 +26,15 @@ while edq != "q":
     if edq == "e":
         emessage = input("Message: ")
         ekey = input("Key: ")
-        eeekey = ekey
-        while len(ekey) < len(emessage):
-            ekey = ekey + eeekey
+        multiplier = len(emessage)/len(ekey)
+
         for x in emessage:
             enumlist.append(associations.find(x))
         for y in ekey:
             ekeynumlist.append(associations.find(y))
+             
+        if len(enumlist) > len(ekeynumlist):
+            ekeynumlist = ekeynumlist*multiplier
              
         ezip = list(zip(enumlist, ekeynumlist))
         
@@ -46,6 +48,12 @@ while edq != "q":
             eend.append(associations[i])
             
         print(''.join(eend))
+
+        enumlist = []
+        ekeynumlist = []
+        enewnums = []
+        eend = []
+
 
 # (1,2),(3,4)
 
@@ -73,6 +81,11 @@ while edq != "q":
             dend.append(associations[i])
             
         print(''.join(dend))
+        
+        dnumlist = []
+        dkeynumlist = []
+        dnewnums = []
+        dend = []
 
     
     if edq != "d" and edq != "e" and edq !="q":
