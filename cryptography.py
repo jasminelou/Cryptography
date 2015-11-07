@@ -26,15 +26,15 @@ while edq != "q":
     if edq == "e":
         emessage = input("Message: ")
         ekey = input("Key: ")
-        multiplier = len(emessage)/len(ekey)
+        eeekey = ekey
+
+        while len(ekey) < len(emessage):
+            ekey = ekey + eeekey
 
         for x in emessage:
             enumlist.append(associations.find(x))
         for y in ekey:
             ekeynumlist.append(associations.find(y))
-             
-        if len(enumlist) > len(ekeynumlist):
-            ekeynumlist = ekeynumlist*multiplier
              
         ezip = list(zip(enumlist, ekeynumlist))
         
